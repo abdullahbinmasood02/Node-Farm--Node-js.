@@ -3,6 +3,7 @@ const http = require("http");
 const url = require("url");
 const replaceTemplate = require("./modules/replaceTemplate");
 
+const PORT = process.env.PORT || 8000;
 /////////FILES
 
 // const textIn = fs.readFile("./txt/start.txt", "utf-8", (err, data) => {
@@ -74,6 +75,6 @@ const server = http.createServer((request, response) => {
   }
 });
 
-server.listen(8000, "127.0.0.1", () => {
+server.listen(port, "127.0.0.1", () => {
   console.log("server listening on port 8000");
 });
